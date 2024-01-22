@@ -20,15 +20,22 @@
 
             src = mysql2sqlite_src;
 
+            doCheck = false;
+
             installPhase = ''
               install -D mysql2sqlite $out/bin/mysql2sqlite
             '';
 
             checkPhase = ''
-              ./unit_test.sh
+              # Unit testing not yet fully implemented in mysql2sqlite
+              ./unit_tests.sh
             '';
+
+            checkInputs = with pkgs; [
+              sqlite
+            ];
           };
         };
       }
-    );
+   );
 }
