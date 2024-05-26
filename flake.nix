@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-24.05";
     flake-utils.url = "github:numtide/flake-utils";
     mysql2sqlite_src.url = "github:dumblob/mysql2sqlite";
     mysql2sqlite_src.flake = false;
